@@ -1,0 +1,34 @@
+﻿<Window x:Class="Twilithe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:hc="https://handyorg.github.io/handycontrol" 
+        mc:Ignorable="d" Title="Twilithe" Height="350" Width="500" Icon="/图标.png">
+    <Grid>
+        <GroupBox Header="目标语言" Margin="10,141,10,43">
+            <Grid>
+                <RadioButton x:Name="Target_Twilithe" Content="暮言" VerticalAlignment="Top" HorizontalAlignment="Left" IsChecked="True" GroupName="Target" />
+                <RadioButton x:Name="Target_English" Content="英文" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,21,0,0" GroupName="Target"/>
+                <RadioButton x:Name="Target_Chinese" Content="中文" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,42,0,0" GroupName="Target"/>
+                <hc:TextBox x:Name="OutputTextbox" HorizontalAlignment="Left" Height="80" Margin="60,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" AcceptsReturn="True" VerticalContentAlignment="Top"/>
+            </Grid>
+
+        </GroupBox>
+        <GroupBox Header="源语言" Margin="10,10,10,175">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="43*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <RadioButton x:Name="Source_Twilithe" Content="暮言" VerticalAlignment="Top" HorizontalAlignment="Left" IsChecked="False" GroupName="Source" />
+                <RadioButton x:Name="Source_English" Content="英文" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,21,0,0" GroupName="Source"/>
+                <RadioButton x:Name="Source_Chinese" Content="中文" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,42,0,0" IsChecked="True" GroupName="Source"/>
+                <hc:TextBox x:Name="InputTextbox" HorizontalAlignment="Left" Height="80" Margin="60,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="390" AcceptsReturn="True" VerticalContentAlignment="Top" Grid.ColumnSpan="2"/>
+            </Grid>
+
+        </GroupBox>
+        <Button x:Name="TranslationButton" Content="翻译" Margin="0,273,0,0" VerticalAlignment="Top" Width="465" Click="TranslationButton_Click"/>
+    </Grid>
+
+</Window>
